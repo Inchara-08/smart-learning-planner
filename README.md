@@ -71,7 +71,7 @@ Access the Application
 Page     	    URL
 Frontend	     http://localhost:3000
 Django Admin	 http://localhost:8000/admin
-Login	        http://localhost:3000/login
+Login	         http://localhost:3000/login
 Register	     http://localhost:3000/register
 
 Default Admin Credentials:
