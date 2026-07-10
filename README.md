@@ -109,53 +109,40 @@ smart-learning-planner/
         └── App.js
 🎯 Key Features Explained
 1. Smart Study Plan
+
 The application automatically generates a personalized study schedule based on:
-
 Weak subjects (marked by the user)
-
 Confidence levels (0-100%)
-
 Exam dates
-
 Daily available study hours
 
 2. Subject & Topic Management
+
 Add subjects with confidence ratings
-
 Mark subjects as weak for extra focus
-
 Add topics with smart suggestions
-
 Track topic completion
-
 Adjust confidence levels with sliders
 
 3. Pomodoro Timer
+
 25-minute study sessions
-
 5-minute breaks
-
 Tracks daily sessions completed
-
 Progress ring visualization
 
 4. Progress Analytics
+
 Confidence level charts for all subjects
-
 Average confidence calculation
-
 Weak/Strong subject identification
-
 🖼️ Screenshots
 Login Page
 https://screenshots/login.png
-
 Dashboard
 https://screenshots/dashboard.png
-
 Study Plan
 https://screenshots/studyplan.png
-
 Dark Mode
 https://screenshots/darkmode.png
 
@@ -171,15 +158,13 @@ text
 react: ^18.2.0
 react-router-dom: ^6.11.0
 axios: ^1.4.0
+
 🤝 Contributing
+
 Fork the repository
-
 Create a feature branch (git checkout -b feature/AmazingFeature)
-
 Commit changes (git commit -m 'Add some AmazingFeature')
-
 Push to branch (git push origin feature/AmazingFeature)
-
 Open a Pull Request
 
 📝 License
