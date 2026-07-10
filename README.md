@@ -1,70 +1,197 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📚 Smart Learning Planner
 
-## Available Scripts
+A full-stack web application that helps students create personalized study plans, track their learning progress, and stay focused with built-in productivity tools.
 
-In the project directory, you can run:
+✨ Features
 
-### `npm start`
+- 🔐 **User Authentication** - Secure login and registration with JWT tokens
+- 📊 **Interactive Dashboard** - Real-time statistics, subject management, and progress tracking
+- 📚 **Smart Study Plan** - AI-powered schedule generation based on weak subjects and confidence levels
+- ⏱️ **Pomodoro Timer** - 25-minute focus sessions with break reminders and session tracking
+- 📈 **Progress Analytics** - Visual charts showing subject confidence and overall progress
+- 🎨 **Dark/Light Mode** - Toggle between themes for comfortable viewing
+- 📱 **Fully Responsive** - Works on all devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ Frontend
+- React.js
+- React Router
+- Axios
+- CSS3
 
-### `npm test`
+ Backend
+- Django
+- Django REST Framework
+- JWT Authentication
+- SQLite3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🚀 Quick Start
 
-### `npm run build`
+Prerequisites
+- Python 3.8+
+- Node.js 14+
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone https://github.com/Inchara-08/smart-learning-planner.git
+cd smart-learning-planner
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Create virtual environment
+python -m venv myenv
+myenv\Scripts\activate  # Windows
+source myenv/bin/activate  # Mac/Linux
 
-### `npm run eject`
+# Install dependencies
+pip install django djangorestframework django-cors-headers djangorestframework-simplejwt
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Run migrations
+cd backend
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start backend server
+python manage.py runserver
+Frontend Setup
+bash
+# Open a new terminal
+cd frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Install dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start React app
+npm start
+Access the Application
+Page	URL
+Frontend	http://localhost:3000
+Django Admin	http://localhost:8000/admin
+Login	http://localhost:3000/login
+Register	http://localhost:3000/register
 
-## Learn More
+Default Admin Credentials:
+Username: admin
+Password: admin123
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📁 Project Structure
+text
+smart-learning-planner/
+├── backend/
+│   ├── api/
+│   │   ├── models.py      # Database models
+│   │   ├── views.py       # API endpoints
+│   │   ├── serializers.py # Data serializers
+│   │   └── urls.py        # API routing
+│   └── backend/
+│       └── settings.py    # Django settings
+└── frontend/
+    └── src/
+        ├── components/
+        │   ├── Login.js
+        │   ├── Register.js
+        │   ├── Dashboard.js
+        │   ├── Navbar.js
+        │   ├── StudyPlan.js
+        │   ├── AddSubject.js
+        │   ├── TopicManager.js
+        │   ├── ProgressChart.js
+        │   ├── SmartSchedule.js
+        │   ├── PomodoroTimer.js
+        │   ├── SearchAndSort.js
+        │   └── ExportReport.js
+        ├── services/
+        │   └── api.js      # API service layer
+        └── App.js
+🎯 Key Features Explained
+1. Smart Study Plan
+The application automatically generates a personalized study schedule based on:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Weak subjects (marked by the user)
 
-### Code Splitting
+Confidence levels (0-100%)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Exam dates
 
-### Analyzing the Bundle Size
+Daily available study hours
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Subject & Topic Management
+Add subjects with confidence ratings
 
-### Making a Progressive Web App
+Mark subjects as weak for extra focus
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add topics with smart suggestions
 
-### Advanced Configuration
+Track topic completion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Adjust confidence levels with sliders
 
-### Deployment
+3. Pomodoro Timer
+25-minute study sessions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5-minute breaks
 
-### `npm run build` fails to minify
+Tracks daily sessions completed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Progress ring visualization
+
+4. Progress Analytics
+Confidence level charts for all subjects
+
+Average confidence calculation
+
+Weak/Strong subject identification
+
+🖼️ Screenshots
+Login Page
+https://screenshots/login.png
+
+Dashboard
+https://screenshots/dashboard.png
+
+Study Plan
+https://screenshots/studyplan.png
+
+Dark Mode
+https://screenshots/darkmode.png
+
+📦 Dependencies
+Backend Dependencies
+text
+Django==4.2.0
+djangorestframework==3.14.0
+django-cors-headers==3.14.0
+djangorestframework-simplejwt==5.2.2
+Frontend Dependencies
+text
+react: ^18.2.0
+react-router-dom: ^6.11.0
+axios: ^1.4.0
+🤝 Contributing
+Fork the repository
+
+Create a feature branch (git checkout -b feature/AmazingFeature)
+
+Commit changes (git commit -m 'Add some AmazingFeature')
+
+Push to branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📝 License
+This project is open source and available under the MIT License.
+
+👩‍💻 Author
+Inchara
+
+GitHub: @Inchara-08
+
+🙏 Acknowledgments
+Django REST Framework for the robust API
+
+React community for amazing frontend tools
+
